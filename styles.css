@@ -1,0 +1,36 @@
+/* Personalización de la ruleta */
+.ruleta {
+    background-image: conic-gradient(
+        #f87171 0% 12.5%, #60a5fa 12.5% 25%, #fbbf24 25% 37.5%, #4ade80 37.5% 50%, 
+        #818cf8 50% 62.5%, #f472b6 62.5% 75%, #a5b4fc 75% 87.5%, #34d399 87.5% 100%
+    );
+    transition: transform 4s ease-out;
+}
+
+/* Flecha superior apuntando hacia abajo */
+.flecha {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 20px solid #e11d48;
+}
+
+/* Posición de los textos en cada sección */
+.opcion {
+    position: absolute;
+    font-size: 1rem; /* Ajustar tamaño de fuente */
+    font-weight: bold;
+    color: black; /* Cambiado a negro para mejor visibilidad */
+    transform-origin: center;
+    width: 100px; /* Ancho fijo para centrado */
+    text-align: center; /* Alineación centrada */
+}
+.opcion-1 { transform: rotate(20deg) translate(0, -120px); }
+.opcion-2 { transform: rotate(65deg) translate(0, -120px); }
+.opcion-3 { transform: rotate(110deg) translate(0, -120px); }
+.opcion-4 { transform: rotate(155deg) translate(0, -120px); }
+.opcion-5 { transform: rotate(200deg) translate(0, -120px); }
+.opcion-6 { transform: rotate(245deg) translate(0, -120px); }
+.opcion-7 { transform: rotate(290deg) translate(0, -120px); }
+.opcion-8 { transform: rotate(335deg) translate(0, -120px); }
