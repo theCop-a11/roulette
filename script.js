@@ -4,14 +4,14 @@ function girarRuleta() {
     const ruleta = document.getElementById('ruleta');
     const resultado = document.getElementById('resultado');
     
-    // Rotación aleatoria (entre 3 y 7 vueltas completas)
-    const rotacion = Math.floor(Math.random() * 360 + 1440);
+    const anguloGanador = 110; // El ángulo de la opción ganadora
+    const vueltasCompletas = Math.floor(Math.random() * 3 + 5); // De 5 a 7 vueltas completas
+    const rotacion = vueltasCompletas * 360 + anguloGanador; // Total de rotación
+
     ruleta.style.transform = `rotate(${rotacion}deg)`;
 
     // Calcula la opción ganadora después de la animación
     setTimeout(() => {
-        const anguloFinal = rotacion % 360;
-        const indice = Math.floor((360 - anguloFinal) / (360 / opciones.length)) % opciones.length;
-        resultado.textContent = `Resultado: ${opciones[indice]}`;
-    }, 4000); // Espera a que termine la animación (4 segundos)
+        resultado.textContent = `Resultado: ${opciones[5]}`; // Siempre la opción número 3
+    }, 6000); // Espera a que termine la animación (6 segundos)
 }
