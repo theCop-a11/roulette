@@ -13,5 +13,6 @@ function girarRuleta() {
     // Calcula la opción ganadora después de la animación
     setTimeout(() => {
         resultado.textContent = `Resultado: ${opciones[5]}`; // Siempre la opción número 3
+        confetti();
     }, 6000); // Espera a que termine la animación (6 segundos)
 }
