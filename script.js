@@ -1,4 +1,4 @@
-const opciones = ["$100", "$200", "Jackpot", "Lose", "$300", "$400", "Free Spin", "Try Again"];
+const opciones = ["$100", "$200", "Jackpot", "Lose", "$300", "Tenes piojitos", "Free Spin", "Try Again"];
 
 function girarRuleta() {
     const ruleta = document.getElementById('ruleta');
