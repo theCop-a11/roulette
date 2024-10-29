@@ -51,6 +51,25 @@ body {
     color: #333; /* Color de texto */
 }
 
+#btnGirar {
+    background: linear-gradient(135deg, #00b4d8, #0077b6); /* Degradado de azul claro a azul oscuro */
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 12px 24px; /* Ajuste de padding para hacer el botón más grande */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#btnGirar:hover {
+    background: linear-gradient(135deg, #0077b6, #023e8a); /* Cambio de degradado al hacer hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
 #resultado {
     display: none; /* Oculta el div inicialmente */
     font-size: 1.5rem;
