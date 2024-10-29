@@ -26,6 +26,7 @@ function girarRuleta() {
     // Calcula la opción ganadora después de la animación
     setTimeout(() => {
         resultado.textContent = `Resultado: ${opciones[5]}`;// resultado ganador
+        resultado.style.display = 'block';
         btnGirar.style.display = 'none';
         
         confetti();

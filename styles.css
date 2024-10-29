@@ -50,3 +50,27 @@ body {
     background: linear-gradient(135deg, #ff8c00, #ffefba); /* Degradado en tonos cálidos */
     color: #333; /* Color de texto */
 }
+
+#resultado {
+    display: none; /* Oculta el div inicialmente */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #00b4d8, #0077b6); /* Degradado de turquesa a azul */
+    border: 3px solid #023e8a; /* Borde azul oscuro */
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.6), 0px 0px 10px rgba(0, 200, 255, 0.3); /* Sombra en tonos azules */
+    width: 90%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+}
+
+#resultado:hover {
+    transform: scale(1.05);
+}
