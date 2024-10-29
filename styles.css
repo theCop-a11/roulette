@@ -13,13 +13,21 @@
     text-align: center;
 }
 
-/* Flecha superior apuntando hacia abajo */
 .flecha {
     width: 0;
     height: 0;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 20px solid #e11d48;
+}
+
+.flecha:hover {
+    animation: vibrate 0.1s infinite alternate;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(-1px); }
+    100% { transform: translateX(1px); }
 }
 
 /* Posición de los textos en cada sección */
