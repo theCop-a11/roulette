@@ -6,7 +6,7 @@
     <title>Ruleta de Premios</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js?v1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
 
@@ -16,20 +16,12 @@
 
         <!-- Contenedor de la ruleta -->
         <div id="ruleta" class="ruleta w-80 h-80 rounded-full relative flex items-center justify-center p-6">
-            <!-- Textos de cada opción directamente en la ruleta -->
-            <div class="opcion opcion-1">$100</div>
-            <div class="opcion opcion-2">$200</div>
-            <div class="opcion opcion-3">Jackpot</div>
-            <div class="opcion opcion-4">Lose</div>
-            <div class="opcion opcion-5">$300</div>
-            <div class="opcion opcion-6">Tenes piojitos</div>
-            <div class="opcion opcion-7">Free Spin</div>
-            <div class="opcion opcion-8">Try Again</div>
-
+            
             <!-- Centro decorativo de la ruleta -->
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">★</div>
             </div>
+
         </div>
 
         <!-- Botón para girar -->
@@ -41,7 +33,7 @@
         <div id="resultado" class="text-lg font-semibold text-center text-gray-700"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v1"></script>
 
 </body>
 </html>

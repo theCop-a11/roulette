@@ -1,4 +1,16 @@
-const opciones = ["$100", "$200", "Jackpot", "Lose", "$300", "Tenes piojitos", "Free Spin", "Try Again"];
+const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a intentar", "$3000", "Tenes piojitos", "Baile random", "Chiste malo"];
+
+
+function cargarOpciones() {
+  const contenedor = document.getElementById("ruleta");
+
+  opciones.forEach((texto, index) => {
+    const div = document.createElement("div");
+    div.className = `opcion opcion-${index + 1}`;
+    div.textContent = texto;
+    contenedor.appendChild(div);
+  });
+}
 
 function girarRuleta() {
     const ruleta = document.getElementById('ruleta');
@@ -13,9 +25,11 @@ function girarRuleta() {
 
     // Calcula la opción ganadora después de la animación
     setTimeout(() => {
-        resultado.textContent = `Resultado: ${opciones[5]}`; // Siempre la opción número 3
+        resultado.textContent = `Resultado: ${opciones[5]}`;// resultado ganador
         btnGirar.style.display = 'none';
         
         confetti();
     }, 6000); // Espera a que termine la animación (6 segundos)
 }
+
+document.addEventListener("DOMContentLoaded", cargarOpciones);
