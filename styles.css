@@ -14,7 +14,8 @@
 }
 
 .flecha {
-    position: relative;
+    position: absolute; /* Asegura que la flecha esté al frente */
+    z-index: 10; /* Asegura que la flecha esté al frente */
     width: 0;
     height: 0;
     border-left: 16px solid transparent;
@@ -25,10 +26,12 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    margin-bottom: -2rem;
 }
 
 .flecha:hover {
     animation: bounce 0.3s infinite alternate;
+    margin-bottom: -2rem;
 }
 
 @keyframes bounce {
@@ -46,24 +49,23 @@
     animation: oscilacion 0.2s infinite;
 }
 
-/* Posición de los textos en cada sección */
 .opcion {
     position: absolute;
-    font-size: 1rem; /* Ajustar tamaño de fuente */
+    font-size: 1rem;
     font-weight: bold;
-    color: black; /* Cambiado a negro para mejor visibilidad */
+    color: black;
     transform-origin: center;
-    width: 100px; /* Ancho fijo para centrado */
-    text-align: center; /* Alineación centrada */
+    width: 100px;
+    text-align: center;
 }
-.opcion-1 { transform: rotate(25deg) translate(0, -130px); }
-.opcion-2 { transform: rotate(65deg) translate(0, -130px); }
-.opcion-3 { transform: rotate(110deg) translate(0, -130px); }
-.opcion-4 { transform: rotate(155deg) translate(0, -130px); }
-.opcion-5 { transform: rotate(200deg) translate(0, -130px); }
-.opcion-6 { transform: rotate(245deg) translate(0, -130px); }
-.opcion-7 { transform: rotate(290deg) translate(0, -130px); }
-.opcion-8 { transform: rotate(335deg) translate(0, -130px); }
+.opcion-1 { transform: rotate(25deg) translate(0, -132px); }
+.opcion-2 { transform: rotate(65deg) translate(0, -132px); }
+.opcion-3 { transform: rotate(110deg) translate(0, -132px); }
+.opcion-4 { transform: rotate(155deg) translate(0, -132px); }
+.opcion-5 { transform: rotate(200deg) translate(0, -132px); }
+.opcion-6 { transform: rotate(245deg) translate(0, -132px); }
+.opcion-7 { transform: rotate(290deg) translate(0, -132px); }
+.opcion-8 { transform: rotate(335deg) translate(0, -132px); }
 
 body {
     margin: 0;
@@ -71,27 +73,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #ff8c00, #ffefba); /* Degradado en tonos cálidos */
-    color: #333; /* Color de texto */
+    background: linear-gradient(135deg, #ff8c00, #ffefba);
+    color: #333;
 }
 
 #btnGirar {
-    background: linear-gradient(135deg, #00b4d8, #0077b6); /* Degradado de azul claro a azul oscuro */
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
     color: #fff;
     font-size: 1.25rem;
     font-weight: bold;
-    padding: 12px 24px; /* Ajuste de padding para hacer el botón más grande */
+    padding: 12px 24px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 #btnGirar:hover {
-    background: linear-gradient(135deg, #0077b6, #023e8a); /* Cambio de degradado al hacer hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
-    transform: scale(1.05); /* Agranda ligeramente el botón */
+    background: linear-gradient(135deg, #0077b6, #023e8a);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Agranda el botón */
 }
 
 #resultado {
@@ -100,12 +102,12 @@ body {
     font-weight: bold;
     text-align: center;
     color: #fff;
-    background: linear-gradient(135deg, #00b4d8, #0077b6); /* Degradado de turquesa a azul */
-    border: 3px solid #023e8a; /* Borde azul oscuro */
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    border: 3px solid #023e8a;
     border-radius: 12px;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.6), 0px 0px 10px rgba(0, 200, 255, 0.3); /* Sombra en tonos azules */
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.6), 0px 0px 10px rgba(0, 200, 255, 0.3);
     width: 90%;
     max-width: 350px;
     margin-left: auto;

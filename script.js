@@ -10,7 +10,7 @@ function cargarOpciones() {
   opciones.forEach((texto, index) => {
       const div = document.createElement("div");
       div.className = `opcion opcion-${index + 1}`;
-      div.innerHTML = `<span style="color: #c2500e;">•</span><br>` + texto; // Punto en rojo con <span>
+      div.innerHTML = `<span style="color: #c2500e;">•</span><br>` + texto;
       contenedor.appendChild(div);
   });
 }
@@ -26,7 +26,7 @@ function girarRuleta() {
     flecha.classList.add('oscilando');
     isSpinning = true; // Bloquea nuevos giros
 
-    const anguloGanador = 110; // El ángulo de la opción ganadora
+    const anguloGanador = 110;
     const vueltasCompletas = Math.floor(Math.random() * 3 + 5); // De 5 a 7 vueltas completas
     const rotacionFinal = vueltasCompletas * 360 + anguloGanador;
 
