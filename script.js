@@ -2,6 +2,7 @@ const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a 
 let isDragging = false;
 let lastY = 0;
 let rotation = 0;
+let isSpinning = false;
 
 function cargarOpciones() {
     const contenedor = document.getElementById("ruleta");
@@ -15,12 +16,15 @@ function cargarOpciones() {
 }
 
 function girarRuleta() {
+    if (isSpinning) return; // Evita girar si ya está en movimiento
+
     const ruleta = document.getElementById('ruleta');
     const flecha = document.querySelector('.flecha');
     const resultado = document.getElementById('resultado');
     const btnGirar = document.getElementById('btnGirar');
 
     flecha.classList.add('oscilando');
+    isSpinning = true; // Bloquea nuevos giros
 
     const anguloGanador = 110; // El ángulo de la opción ganadora
     const vueltasCompletas = Math.floor(Math.random() * 3 + 5); // De 5 a 7 vueltas completas
@@ -39,37 +43,39 @@ function girarRuleta() {
 }
 
 function onMouseDown(event) {
+    if (isSpinning) return; // Evita arrastrar si ya está en movimiento
     isDragging = true;
     lastY = event.clientY;
 }
 
 function onMouseMove(event) {
-    if (!isDragging) return; 
-    const deltaY = lastY - event.clientY; 
+    if (!isDragging || isSpinning) return; // Evita mover si ya está en movimiento
+    const deltaY = lastY - event.clientY;
     rotation += deltaY * 1.5; // Ajusta la sensibilidad del arrastre
     document.getElementById('ruleta').style.transform = `rotate(${rotation}deg)`;
     lastY = event.clientY;
 }
 
 function onMouseUp() {
-    isDragging = false; 
+    isDragging = false;
 }
 
 function onTouchStart(event) {
+    if (isSpinning) return; // Evita arrastrar si ya está en movimiento
     isDragging = true;
-    lastY = event.touches[0].clientY; 
+    lastY = event.touches[0].clientY;
 }
 
 function onTouchMove(event) {
-    if (!isDragging) return;
+    if (!isDragging || isSpinning) return; // Evita mover si ya está en movimiento
     const deltaY = lastY - event.touches[0].clientY;
     rotation += deltaY * 1.5; // Ajusta la sensibilidad del arrastre
     document.getElementById('ruleta').style.transform = `rotate(${rotation}deg)`;
-    lastY = event.touches[0].clientY; 
+    lastY = event.touches[0].clientY;
 }
 
 function onTouchEnd() {
-    isDragging = false; 
+    isDragging = false;
 }
 
 // Inicialización
