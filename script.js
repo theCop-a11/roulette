@@ -5,14 +5,14 @@ let rotation = 0;
 let isSpinning = false;
 
 function cargarOpciones() {
-    const contenedor = document.getElementById("ruleta");
+  const contenedor = document.getElementById("ruleta");
 
-    opciones.forEach((texto, index) => {
-        const div = document.createElement("div");
-        div.className = `opcion opcion-${index + 1}`;
-        div.textContent = texto;
-        contenedor.appendChild(div);
-    });
+  opciones.forEach((texto, index) => {
+      const div = document.createElement("div");
+      div.className = `opcion opcion-${index + 1}`;
+      div.innerHTML = `<span style="color: #c2500e;">•</span><br>` + texto; // Punto en rojo con <span>
+      contenedor.appendChild(div);
+  });
 }
 
 function girarRuleta() {
