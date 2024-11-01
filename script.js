@@ -1,4 +1,4 @@
-const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a intentar", "$3000", "Tenes piojitos", "Baile random", "Chiste malo"];
+const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a intentar", "$3000", "Pete al cumpleañero", "Baile random", "Chiste malo"];
 let isDragging = false;
 let lastY = 0;
 let rotation = 0;
