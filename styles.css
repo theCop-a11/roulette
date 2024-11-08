@@ -1,3 +1,19 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff8c00, #ffefba);
+    color: #333;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .ruleta {
     background-image: conic-gradient(
         #f87171 0% 12.5%, #60a5fa 12.5% 25%, #fbbf24 25% 37.5%, #4ade80 37.5% 50%, 
@@ -66,16 +82,6 @@
 .opcion-6 { transform: rotate(245deg) translate(0, -132px); }
 .opcion-7 { transform: rotate(290deg) translate(0, -132px); }
 .opcion-8 { transform: rotate(335deg) translate(0, -132px); }
-
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #ff8c00, #ffefba);
-    color: #333;
-}
 
 #btnGirar {
     background: linear-gradient(135deg, #00b4d8, #0077b6);
