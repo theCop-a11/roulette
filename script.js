@@ -1,4 +1,4 @@
-const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a intentar", "$3000", "Tenes piojitos", "Baile random", "Chiste malo"];
+const opciones = ["Cachetada", "Ganaste $2000", "Vale por un abrazo", "Vuelve a intentar", "$3000", "Pete para el cumpleañero", "Baile random", "Chiste malo"];
 const angulos = [25, 65, 110, 155, 200, 245, 290, 335]; // Ángulos exactos para cada opción
 let giroRandomHabilitado = false;
 let isDragging = false;
